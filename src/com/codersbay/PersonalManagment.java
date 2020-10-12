@@ -18,7 +18,7 @@ public class PersonalManagment {
     }
     public void delPerson(String firstName, String lastName, LocalDate birthday, Gender gender, Address address) {
         for (int i = 0; i < persons.size(); i++) {
-            if (persons.get(i).firstName.equals(firstName) && persons.get(i).lastName.equals(lastName) && persons.get(i).birthday.equals(birthday) && persons.get(i).gender.equals(gender) && persons.get(i).address.equals(address)) {
+            if (persons.get(i).firstName.equals(firstName) && persons.get(i).lastName.equals(lastName) && persons.get(i).birthday.equals(birthday) && persons.get(i).gender.equals(gender) && (persons.get(i).address == null && address == null || persons.get(i).address.equals(address))) {
                 persons.remove(persons.get(i));
             }
         }

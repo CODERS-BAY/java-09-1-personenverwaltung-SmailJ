@@ -14,6 +14,7 @@ public class Main {
         Scanner sc = new Scanner(System.in);
         String fname;
         String lname;
+        String fullname;
         int bday1;
         int bday2;
         int bday3;
@@ -25,7 +26,8 @@ public class Main {
         String user;
 
         do {
-            System.out.println("What you want to do ? 1 - add | 2 - remove | 3 - list | q - quit");
+            System.out.println("What you want to do ?");
+            System.out.println("1 - add full | 2 - remove full | 3 - add half | 4 - remove half | 5 - list | q - quit");
             user = sc.nextLine();
             if (user.equals("1")) {
                 System.out.println("Enter the firstname:");
@@ -84,6 +86,23 @@ public class Main {
                 System.out.println("Successfully removed.");
             }
             if (user.equals("3")) {
+                System.out.println("Enter the first name");
+                fname = sc.nextLine();
+                System.out.println("Enter the last name");
+                lname = sc.nextLine();
+
+                personalManagment.addPerson(fname.toUpperCase(), lname.toUpperCase(), null, null, null);
+                System.out.println("Successfully added");
+            }
+            if (user.equals("4")) {
+                System.out.println("Enter the first name");
+                fname = sc.nextLine();
+                System.out.println("Enter the last name");
+                lname = sc.nextLine();
+
+                personalManagment.delPerson(fname.toUpperCase(), lname.toUpperCase(), null, null, null);
+            }
+            if (user.equals("5")) {
                 for (int i = 0; i < personalManagment.persons.size(); i++) {
                     System.out.println(personalManagment.persons.get(i));
                 }
