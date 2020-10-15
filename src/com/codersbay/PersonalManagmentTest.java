@@ -28,6 +28,9 @@ public class PersonalManagmentTest {
         myPersonal.addPerson("test","test", LocalDate.of(1997,9,5), Gender.MALE, null);
         assertEquals(myPersonal.persons.size(), 1);
         myPersonal.delPerson("test", "test", LocalDate.of(1997, 9, 5), Gender.MALE, null);
+        myPersonal.addPerson("test", "test", null, null, null);
+        assertEquals(myPersonal.persons.size(), 1);
+        myPersonal.delPerson("test", "test", null, null, null);
     }
 
 }

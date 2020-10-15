@@ -22,7 +22,7 @@ public class Person {
         return "Person{" +
                 "First name='" + firstName + '\'' +
                 ", Last name='" + lastName + '\'' +
-                (birthday == null ? "noBirthday" : (birthday.getDayOfMonth() + "." + birthday.getMonthValue() + "." + birthday.getYear())) +
+                ", Birthday =" + (birthday == null ? "noBirthday" : (birthday.getDayOfMonth() + "." + birthday.getMonthValue() + "." + birthday.getYear())) +
                 ", Gender=" + gender +
                 ", Address=" + address +
                 '}';
